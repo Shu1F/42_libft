@@ -1,14 +1,16 @@
-#include <stddef.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sfujiike <sfujiike@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/08 10:27:10 by sfujiike          #+#    #+#             */
+/*   Updated: 2025/05/08 10:27:10 by sfujiike         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_strlen(const char *str) {
-  int length = 0;
-  while (*str != '\0') {
-    length++;
-    str++;
-  }
-  return length;
-}
+#include "libft.h"
 
 char *strdup(const char *str) {
   size_t len = ft_strlen(str);

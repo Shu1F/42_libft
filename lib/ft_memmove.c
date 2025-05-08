@@ -1,6 +1,19 @@
-#include <stddef.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sfujiike <sfujiike@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/08 10:26:59 by sfujiike          #+#    #+#             */
+/*   Updated: 2025/05/08 10:26:59 by sfujiike         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memmove(void *dest, const void *src, size_t len) {
+#include "libft.h"
+
+void *ft_memmove(void *dest, const void *src, size_t len)
+{
   unsigned char *dst = (unsigned char *)dest;
   const unsigned char *sc = (const unsigned char *)src;
 

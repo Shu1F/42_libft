@@ -1,14 +1,17 @@
-#include <stddef.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sfujiike <sfujiike@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/08 10:27:28 by sfujiike          #+#    #+#             */
+/*   Updated: 2025/05/08 10:27:28 by sfujiike         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_strlen(const char *str) {
-  int length = 0;
-  while (*str != '\0') {
-    length++;
-    str++;
-  }
-  return length;
-}
+#include "libft.h"
+
 
 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize) {
   int i = 0;

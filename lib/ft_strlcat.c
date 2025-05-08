@@ -1,13 +1,17 @@
-#include <stddef.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sfujiike <sfujiike@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/08 10:27:22 by sfujiike          #+#    #+#             */
+/*   Updated: 2025/05/08 10:27:22 by sfujiike         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_strlen(const char *str) {
-  int length = 0;
-  while (*str != '\0') {
-    length++;
-    str++;
-  }
-  return length;
-}
+
+#include "libft.h"
 
 size_t strlcat(char *dst, const char *src, size_t dstsize) {
   int src_len = 0;

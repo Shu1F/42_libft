@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfujiike <sfujiike@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/02 14:47:57 by sfujiike          #+#    #+#             */
-/*   Updated: 2025/05/08 13:39:09 by sfujiike         ###   ########.fr       */
+/*   Created: 2025/05/05 11:26:31 by sfujiike          #+#    #+#             */
+/*   Updated: 2025/05/08 13:39:34 by sfujiike         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum(int c) {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9'));
+int ft_isprint(int c) {
+	return (c >= 32 && c <= 126);
 }
 
-int main(void) {
-  int i = 0;
-  char str[] = "Tokyo";
-  char str2[] = "Tokyo12#";
-  //   char str2[] = "42Tokyo";
-  while (str2[i] != '\0') {
-    if (ft_isalnum(str2[i]))
-      printf("%c:True\n", str2[i]);
-    else
-      printf("%c:False\n", str2[i]);
-    i++;
-  }
-  return 0;
+int main (void) {
+	printf("%d", ft_isprint('\n'));
 }

@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfujiike <sfujiike@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/02 14:47:57 by sfujiike          #+#    #+#             */
-/*   Updated: 2025/05/08 13:39:09 by sfujiike         ###   ########.fr       */
+/*   Created: 2025/05/05 14:20:39 by sfujiike          #+#    #+#             */
+/*   Updated: 2025/05/08 13:39:41 by sfujiike         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum(int c) {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9'));
-}
+void *ft_memcpy(void *dest, const void *src, size_t len)
+{
+	unsigned char *dest_copy = (unsigned char *)dest;
+	const unsigned char *src_copy = (const unsigned char *)src;
 
-int main(void) {
-  int i = 0;
-  char str[] = "Tokyo";
-  char str2[] = "Tokyo12#";
-  //   char str2[] = "42Tokyo";
-  while (str2[i] != '\0') {
-    if (ft_isalnum(str2[i]))
-      printf("%c:True\n", str2[i]);
-    else
-      printf("%c:False\n", str2[i]);
-    i++;
-  }
-  return 0;
+	if(dest_copy == src_copy || len == 0)
+		return dest;
+
+	while(len--)
+		*dest_copy++ = *src_copy++;
+	return dest;
 }

@@ -1,15 +1,16 @@
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sfujiike <sfujiike@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/08 10:28:01 by sfujiike          #+#    #+#             */
+/*   Updated: 2025/05/08 10:28:01 by sfujiike         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-size_t ft_strlen(const char *str) {
-  size_t length = 0;
-  while (*str != '\0') {
-    length++;
-    str++;
-  }
-  return length;
-}
+#include "libft.h"
 
 char *ft_sub(size_t copy_len, unsigned int start, char *newStr, char const *s) {
   size_t i = 0;
