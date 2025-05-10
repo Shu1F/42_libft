@@ -13,20 +13,6 @@
 #include "libft.h"
 
 int ft_isalnum(int c) {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9'));
-}
-
-int main(void) {
-  int i = 0;
-  char str[] = "Tokyo";
-  char str2[] = "Tokyo12#";
-  //   char str2[] = "42Tokyo";
-  while (str2[i] != '\0') {
-    if (ft_isalnum(str2[i]))
-      printf("%c:True\n", str2[i]);
-    else
-      printf("%c:False\n", str2[i]);
-    i++;
-  }
-  return 0;
+  return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') ||
+          (c >= '0' && c <= '9'));
 }

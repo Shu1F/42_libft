@@ -18,9 +18,3 @@ size_t ft_strlen(const char *str) {
     length++;
   return length;
 }
-
-int main(void) {
-  char str[] = "Tokyo";
-  printf("%d", ft_strlen(str));
-  return 0;
-}

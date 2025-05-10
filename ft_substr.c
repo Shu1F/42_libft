@@ -42,8 +42,3 @@ char *ft_substr(char const *s, unsigned int start, size_t len) {
     return NULL;
   return ft_sub(copy_len, start, newStr, s);
 }
-
-int main(void) {
-  char str[] = "42Tokyo";
-  printf("%s", ft_substr(str, 2, 3));
-}

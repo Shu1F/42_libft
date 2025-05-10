@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfujiike <sfujiike@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/08 10:27:28 by sfujiike          #+#    #+#             */
-/*   Updated: 2025/05/08 10:27:28 by sfujiike         ###   ########.fr       */
+/*   Created: 2025/05/08 10:26:43 by sfujiike          #+#    #+#             */
+/*   Updated: 2025/05/08 10:26:43 by sfujiike         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+void *ft_memchr(const void *s, int chr, size_t len) {
+  const unsigned char *str = (const unsigned char *)s;
+  size_t i = 0;
 
-size_t ft_strlcpy(char *dst, const char *src, size_t dstsize) {
-  int i = 0;
-  int src_len = ft_strlen(src);
-  if (dstsize == 0)
-    return src_len;
-  while (dstsize - 1 > i && src[i] != '\0') {
-    dst[i] = src[i];
+  while (len > i) {
+    if (str[i] == (unsigned char)chr)
+      return (void *)(str + i);
     i++;
   }
-  *dst = '\0';
-  return src_len;
-}
-
-int main(void) {
-  char str[] = "42Tokyo";
-  char str1[] = "AAAAAAAAAAAAAAAAAAAAAAA";
-  printf("%d\n", ft_strlcpy(str1, str, 3));
+  return NULL;
 }

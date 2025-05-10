@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfujiike <sfujiike@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/08 10:26:43 by sfujiike          #+#    #+#             */
-/*   Updated: 2025/05/08 10:26:43 by sfujiike         ###   ########.fr       */
+/*   Created: 2025/05/08 10:27:28 by sfujiike          #+#    #+#             */
+/*   Updated: 2025/05/08 10:27:28 by sfujiike         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memchr(const void *s, int chr, size_t len) {
-  const unsigned char *str = (const unsigned char *)s;
-  size_t i = 0;
-
-  while (len > i) {
-    if (str[i] == (unsigned char)chr)
-      return (void *)(str + i);
+size_t ft_strlcpy(char *dst, const char *src, size_t dstsize) {
+  int i = 0;
+  int src_len = ft_strlen(src);
+  if (dstsize == 0)
+    return src_len;
+  while (dstsize - 1 > i && src[i] != '\0') {
+    dst[i] = src[i];
     i++;
   }
-  return NULL;
-}
-
-int main(void) {
-  char str[] = "42Tokyo";
-  char chr = 'o';
-  printf("%s", ft_memchr(str, chr, 5));
+  *dst = '\0';
+  return src_len;
 }
