@@ -6,15 +6,19 @@
 /*   By: sfujiike <sfujiike@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 13:31:56 by sfujiike          #+#    #+#             */
-/*   Updated: 2025/05/08 13:39:03 by sfujiike         ###   ########.fr       */
+/*   Updated: 2025/05/14 12:53:55 by sfujiike         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t len) {
-	unsigned char *p = (unsigned char *)s;
-	while(len--) {
+void	ft_bzero(void *s, size_t len)
+{
+	unsigned char	*p;
+
+	p = (unsigned char *)s;
+	while (len--)
+	{
 		*p = '\0';
 		p++;
 	}

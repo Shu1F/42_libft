@@ -6,10 +6,13 @@
 /*   By: sfujiike <sfujiike@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 11:26:31 by sfujiike          #+#    #+#             */
-/*   Updated: 2025/05/08 13:39:34 by sfujiike         ###   ########.fr       */
+/*   Updated: 2025/05/14 11:13:07 by sfujiike         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c) { return (c >= 32 && c <= 126); }
+int	ft_isprint(int c)
+{
+	return (c >= 32 && c <= 126);
+}

@@ -1,12 +1,25 @@
-void ft_striteri(char *s, void (*f)(unsigned int, char *)) {
-  unsigned int i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sfujiike <sfujiike@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/14 11:53:21 by sfujiike          #+#    #+#             */
+/*   Updated: 2025/05/14 11:53:21 by sfujiike         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-  i = 0;
-  if (!s || !f)
-    return;
-  // voidだから戻り値無し。
-  while (s[i] != '\0') {
-    f(i, &s[i]);
-    i++;
-  }
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
+	unsigned int	i;
+
+	i = 0;
+	if (!s || !f)
+		return ;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }

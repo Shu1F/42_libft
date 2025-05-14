@@ -10,25 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-size_t strlcat(char *dst, const char *src, size_t dstsize) {
-  int src_len = 0;
-  int dst_len = 0;
-  int i = 0;
-  int dst_rest;
-  src_len = ft_strlen(src);
-  dst_len = ft_strlen(dst);
-  if (dst_len >= dstsize)
-    return dstsize + src_len;
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+{
+	size_t	src_len;
+	size_t	dst_len;
+	size_t	i;
+	size_t	dst_rest;
 
-  dst_rest = dstsize - dst_len - 1;
-
-  while (dst_rest > i && src[i] != '\0') {
-    dst[dst_len + i] = src[i];
-    i++;
-  }
-  dst[dst_len + i] = '\0';
-  return dst_len + src_len;
+	src_len = ft_strlen(src);
+	if (dstsize == 0)
+		return (src_len);
+	dst_len = ft_strlen(dst);
+	if (dst_len >= dstsize)
+		return (dstsize + src_len);
+	dst_rest = dstsize - dst_len - 1;
+	i = 0;
+	while (dst_rest > i && src[i] != '\0')
+	{
+		dst[dst_len + i] = src[i];
+		i++;
+	}
+	dst[dst_len + i] = '\0';
+	return (dst_len + src_len);
 }

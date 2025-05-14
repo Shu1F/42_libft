@@ -6,9 +6,13 @@
 /*   By: sfujiike <sfujiike@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 11:10:44 by sfujiike          #+#    #+#             */
-/*   Updated: 2025/05/08 13:39:17 by sfujiike         ###   ########.fr       */
+/*   Updated: 2025/05/14 11:08:54 by sfujiike         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_isascii(int c) { return (c >= 0 && c <= 127); }
+
+int	ft_isascii(int c)
+{
+	return (c >= 0 && c <= 127);
+}
